@@ -1,0 +1,72 @@
+@charset "utf-8";
+:root{
+    --main-color : #2DB400;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+section{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2{
+    text-transform: uppercase;
+    font-size: 120px;
+    color: #000;
+    line-height: 1;
+}
+
+.con01 span{
+    display: block;
+    -webkit-text-stroke: 2px #2DB400;
+    color: transparent;
+    line-height: 0.8;
+}
+
+/* con02 */
+.con02{
+    position: relative;
+    height: 1200px;
+    overflow: hidden;
+}
+.con02 .circle{
+    display: block;
+    width: 2500px;
+    height: 2500px;
+    border-radius: 50%;
+    position: absolute;
+    background: #000;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.con02 .textBox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    transform: translateX(-50%);
+    text-transform: uppercase;
+    text-align: center;
+    z-index: 2;
+}
+.con02 .textBox p{
+    font-size: 64px;
+    font-weight: bold;
+    letter-spacing: -6px;
+    line-height: 1;
+}
+
+/* con03 */
+.con03{
+    background: #000;
+}
+.con03 h2{
+    color: #888;
+}
