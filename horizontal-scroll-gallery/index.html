@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+    <title>Horizontal Scroll Gallery</title>
+</head>
+<body>
+    <div class="wrap">
+        <section class="con01">
+            <div class="textBox">
+                <h1 class="logo"><img src="images/hailey.svg" alt=""></h1>
+                <p class="title en1">hxezu</p>
+                <p class="txt en">안녕하세요, 프론트엔드 개발자 현혜주입니다.</p>
+            </div>
+        </section>
+
+        <section class="portfolio">
+            <div class="textBox">
+                <h2>Photo Album</h2>
+                <p>THIS IS A FASHION MODEL PHOTOBOOK.</p>
+            </div>
+            <ul class="list">
+                <li class="a"><div class="box"><img src="images/img_01.png" alt=""></div></li>
+                <li class="b"><div class="box"><img src="images/img_02.png" alt=""></div></li>
+                <li class="c"><div class="box"><img src="images/img_03.png" alt=""></div></li>
+                <li class="b"><div class="box"><img src="images/img_04.png" alt=""></div></li>
+                <li class="a"><div class="box"><img src="images/img_05.png" alt=""></div></li>
+                <li class="c"><div class="box"><img src="images/img_06.png" alt=""></div></li>
+                <li class="a"><div class="box"><img src="images/img_07.png" alt=""></div></li>
+                <li class="c"><div class="box"><img src="images/img_08.png" alt=""></div></li>
+                <li class="a"><div class="box"><img src="images/img_09.png" alt=""></div></li>
+                <li class="b"><div class="box"><img src="images/img_10.png" alt=""></div></li>
+                <li class="c"><div class="box"><img src="images/img_11.png" alt=""></div></li>
+            </ul>
+        </section>
+
+        <section class="con03">
+            <div class="textBox">
+                <h2 class="en1">thank you</h2>
+            </div>
+        </section>
+    </div>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        let list = gsap.utils.toArray('.portfolio .list li')
+        let listA = gsap.utils.toArray('.portfolio .list .a')
+        let listB = gsap.utils.toArray('.portfolio .list .b')
+        let listC = gsap.utils.toArray('.portfolio .list .c')
+        
+        let scrollTween = gsap.to(list,{
+            xPercent : -100 * (list.length - 1),
+            ease : 'none',
+            scrollTrigger:{
+                trigger : '.portfolio',
+                pin : true,
+                scrub : 1,
+                start : 'center center',
+                end : '200%'
+            }
+        })
+
+        gsap.to(listA,{
+            y:50,
+            rotation:10,
+            scrollTrigger:{
+                trigger : '.portfolio',
+                scrub : 2,
+                end: '200%'
+            }
+        })
+
+        gsap.to(listB,{
+            y:-50,
+            rotation:20,
+            scrollTrigger:{
+                trigger : '.portfolio',
+                scrub : 2,
+                end: '200%'
+            }
+        })
+
+        gsap.to(listC,{
+            y:20,
+            x:20,
+            rotation:-10,
+            scrollTrigger:{
+                trigger : '.portfolio',
+                scrub : 2,
+                end: '200%'
+            }
+        })
+    </script>
+</body>
+</html>
