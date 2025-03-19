@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap">
+    <title>Character Animation</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <section class="character">
+        <div class="stage"></div>
+    </section>
+
+    <section class="con01">
+        <div class="textBox">
+            <ul class="menu">
+                <li><span class="color">Object</span>production <span class="en1">Illustration</span></li>
+                <li><span class="color">Photo</span>collage <span class="en1">Photoshop</span></li>
+                <li><span class="color">Prototype</span>production <span class="en1">Figma</span></li>
+                <li><span class="color">Web document</span>production <span class="en1">Html/CSS</span></li>
+                <li><span class="color">Interation</span>Implementation <span class="en1">JavaScript</span></li>
+            </ul>
+
+            <div class="container">
+                <ul class="mask">
+                    <li><span class="color">Object</span>production <span class="en1">Illustration</span></li>
+                    <li><span class="color">Photo</span>collage <span class="en1">Photoshop</span></li>
+                    <li><span class="color">Prototype</span>production <span class="en1">Figma</span></li>
+                    <li><span class="color">Web document</span>production <span class="en1">Html/CSS</span></li>
+                    <li><span class="color">Interation</span>Implementation <span class="en1">JavaScript</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="con02">
+        <h2>thank you</h2>
+        <h2>thank you</h2>
+    </section>
+
+    
+    <script>
+    gsap.registerPlugin(ScrollTrigger);
+    
+    //04.제자리에서 한바퀴돌고 인사하는 캐릭터
+    const frameCount  = 14, // 총갯수에서 -1을 빼면 됨
+            offsetValue = 100; // 백분율로 계산
+        
+    gsap.to(".stage", {   // 2.0 -> maxwidth : 200px 한 컷의 넓이
+        backgroundPosition: (- offsetValue * frameCount * 2.0) + "px center", 
+        // backgrounPostion의 x축은 offsetValue와  frameCount와 2.0(한컷의 너비) 곱한 값을  뺀값(단위 px)
+        //연산순위 ()가 먼저 연산되고 * / %이며, + - 순임
+          
+        ease: "steps(" + frameCount + ")", // 마우스 휠을 프레임 컷수에 맞춰준다
+        scrollTrigger: {
+            trigger: ".character",
+            start: "top top",
+            end: "+=" + (frameCount * offsetValue),//frameCount 와 offsetValue를 곱해서 시작점에 더한값
+            pin: true, 
+            scrub: true 
+        }
+    });  
+
+    const container = document.querySelector('.container');
+
+    document.body.addEventListener('mousemove',e=>{
+        const x = e.clientX;
+        const y = e.clientY;
+
+        gsap.to(container,{
+            y : y 
+        });
+        gsap.to('.mask',{
+            y: -y
+        })
+    })
+
+    </script>
+</body>
+</html>
