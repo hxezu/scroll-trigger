@@ -1,0 +1,69 @@
+@charset "utf-8";
+
+/* 구글폰트에서 Cormorant 400 / Noto Sans KR 400 / Public Sans 400 가져옴 */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital@1&family=Noto+Sans+KR&family=Public+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* Reset */
+* {margin: 0;padding: 0;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
+a {color: inherit; text-decoration: inherit;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+button {background: none; border: none;}
+img {vertical-align: middle;}
+
+/* 영어 폰트 */
+.en {font-family: 'Public Sans', sans-serif;}
+.en2 {font-family: 'Cormorant Infant', serif;}
+
+/*layout*/
+body {font-family: 'Noto Sans KR', sans-serif; font-size: 1vw; line-height: 1.6;}
+.wrap{position: relative; margin: 0 auto; overflow: hidden; background: #000; color: #fff;}
+.visual{height: 250vh; position: relative;margin-bottom: 150px;}
+.con02{width: 100%; height: 100vh; margin-bottom: 500px;}
+
+.visual .imgBox{width: 50%; position: absolute; left: 50%; transform: translateX(-50%); top: 3%; perspective: 1500px; text-align: center;}
+.visual .imgBox img{width: 100%;}
+.visual .titleBox{width: 100%; position: absolute; top: 12%; left: 0; line-height: 1.4;}
+.visual .titleBox .for{font-size: 3vw; margin-left: 100px;}
+.visual .titleBox .en2{font-size: 3.5vw; display: inline-block; margin-right: 10px;}
+.visual .titleBox .date{text-align: right; margin-right: 100px; font-size: 2.8;}
+.visual .textLoop ul{display: flex; white-space: nowrap; font-size: 8vw; letter-spacing: -2px;}
+.visual .textLoop ul li{animation: textLoop 3.8s linear infinite; padding: 0 20px;}
+@keyframes textLoop {
+    0%{transform: translate3d(0,0,0);}
+    100%{transform: translate3d(-100%,0,0);}
+}
+
+.visual .textBox{width: 30%; position: absolute; right: 5%; top: 40%;}
+.visual .textBox ul .top{font-size: 3vw; border-bottom: 1px solid #fff;}
+.visual .textBox ul .top h2{font-weight: normal;}
+.visual .textBox ul li{display: flex; margin-bottom: 12px;}
+.visual .textBox ul li h3{font-weight: normal; font-size: 1vw; width: 130px;}
+.visual .textBox ul li .en2{font-size: 1.3vw;}
+.visual .textBox ul li.mode .btnBox a{display: inline-block; border: 1px solid rgba(255,255,255,0.3); padding: 0 20px; margin-right: 5px;}
+.visual .textBox ul li.mode .btnBox a:hover, .visual .textBox ul li.mode .btnBox a:focus{background: rgba(255, 255, 255, 0.3);}
+.visual .textLoop2{position: absolute; bottom: 300px; left:-20px;}
+.visual .textLoop2 ul{display: flex; white-space: nowrap; font-size: 4vw; letter-spacing: -2px; background: rgba(255, 255, 255, 1); color: #000; padding: 5px 0; position: absolute;}
+.visual .textLoop2 ul li{padding: 0 15px;}
+.visual .textLoop2 ul.a{transform: rotate(7deg); background: rgba(255,255,255,0); color: #fff; border-top: 1px solid #fff; border-bottom: 1px solid #fff;}
+.visual .textLoop2 ul.b{transform: rotate(-7deg); top:-80px;}
+
+.visual .textLoop2 ul.a li{animation: textLoop 7s linear infinite;}
+.visual .textLoop2 ul.b li{animation: textLoop2 7s linear infinite;}
+@keyframes textLoop2 {
+    0%{transform: translate3d(-100%,0,0);}
+    100%{transform: translate3d(0,0,0);}
+}
+
+.con02 .textBox{font-size: 3rem; font-family: 'Bebas Neue', serif; line-height: 1.2;}
+.con02 .textBox .mask{display: block;}
+.con02 .textBox .text{
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.2);
+    /*배경 클립을 텍스트 영역으로 제한 텍스트 외부로 나가지 않게*/
+    -webkit-background-clip: text;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(#fff, #fff);
+    background-size: 0% 100%;
+}

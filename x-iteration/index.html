@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X text</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <section class="visual en">
+            <div class="imgBox">
+                <img src="images/work2.jpg" alt="">
+            </div>
+            <div class="titleBox">
+                <p class="for">Website <span class="en2">for</span></p>
+                <div class="textLoop">
+                    <ul>
+                        <li>hxezu Portfolio Process</li>
+                        <li>hxezu Portfolio Process</li>
+                        <li>hxezu Portfolio Process</li>
+                        <li>hxezu Portfolio Process</li>
+                        <li>hxezu Portfolio Process</li>
+                    </ul>
+                </div>
+                <p class="date"><span class="en2">March</span>2025</p>
+            </div>
+
+            <div class="textBox">
+                <ul>
+                    <li class="top">hxezu Portfolio</li>
+                    <li>
+                        <h3>Date</h3>
+                        <span class="en2">March 2025</span>
+                    </li>
+                    <li>
+                        <h3>Concept</h3>
+                        <span class="en2">Responsive Web</span>
+                    </li>
+                    <li>
+                        <h3>Program</h3>
+                        <span class="en2">Visual Studio</span>
+                    </li>
+                    <li>
+                        <h3>Language</h3>
+                        <span class="en2">HTML/CSS, JavaScript, JQuery</span>
+                    </li>
+                    <li class="mode">
+                        <h3>Mode</h3>
+                        <div class="btnBox en2">
+                            <a href="#">PC</a>
+                            <a href="#">Tablet</a>
+                            <a href="#">Mobile</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="textLoop2"> 
+                <ul class="a">
+                    <li>Portfolio UI/UX Process</li>
+                    <li>Portfolio UI/UX Process</li>
+                    <li>Portfolio UI/UX Process</li>
+                    <li>Portfolio UI/UX Process</li>
+                </ul>
+                <ul class="b">
+                    <li>Portfolio UI/UX Process</li>
+                    <li>Portfolio UI/UX Process</li>
+                    <li>Portfolio UI/UX Process</li>
+                    <li>Portfolio UI/UX Process</li>
+                </ul>
+            </div>
+        </section>
+        <section class="con02">
+            <div class="textBox">
+                <span class="mask">
+                    <span class="text">
+                        Nil sine magno vita labore<br>
+                        dedit mortalibus.<br>
+                        Life has given nothing to mortals<br>
+                        without great labor. Nil sine magno vita labore<br>
+                        dedit mortalibus.<br>
+                        Life has given nothing to mortals<br>
+                        without great labor.
+                        Nil sine magno vita labore<br>
+                        dedit mortalibus.<br> 
+                    </span>
+                </span>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.timeline({
+            scrollTrigger:{
+                trigger : '.visual .imgBox',
+                start :'60% 50%',
+                end: '150%',
+                scrub : 1,
+                pin: true,
+                //markers:true
+            }
+        })
+        .fromTo('.visual .imgBox img',
+        {'transform':'rotateY(-40deg) rotateX(50deg)', 'width' : '50%', 'opacity':0.2},
+        {'transform':'rotateY(0deg) rotateX(0deg)', 'width' : '100%', 'opacity':1},0)
+
+        gsap.fromTo('.con02 .textBox .mask span',{
+            'background-size':'0% 100%'
+        },{
+            'background-size':'100% 100%',
+            scrollTrigger:{
+                trigger: '.con02 .textBox',
+                pinnedContainer:'.con02 .textBox',
+                start:'0% 80%',
+                end: '50% 0%',
+                scrub :1
+            }
+        })
+    </script>
+</body>
+</html>
