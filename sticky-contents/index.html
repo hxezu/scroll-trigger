@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky-Contents</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+    <script src='https://unpkg.com/gsap/dist/Observer.min.js'></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <section class="con01">
+            <div class="inner">
+                <div class="mainTextBox">
+                    <h2 class="en">Lecture Contents</h2>
+                    <p class="txt">UI/UX 디자인 | Web Publishing | Portfolio 제작</p>
+                </div>
+                <ul class="listBox">
+                    <li class="box a" >
+                        <div class="topBox">
+                            <h3 class="en">UI/UX Design</h3>
+                            <ul class="in">
+                                <li><a href="#"><img src="images/icon_ai.png" alt=""></a></li>
+                                <li><a href="#"><img src="images/icon_ps.png" alt=""></a></li>
+                                <li><a href="#"><img src="images/icon_Figma.png" alt=""></a></li>
+                            </ul>
+                        </div>
+                        <div class="bottomBox">
+                            <p class="num">1</p>
+                            <div class="textBox">
+                                <p class="tit">
+                                    Illustrator와 Photoshop기초에 이어 Figma를 통한 App & Web UI Design 및 ProtoType제작
+                                </p>
+                                <p class="txt en">
+                                    You can create a prototype using the basic operating skills and usage of Figma, a key tool in UI/UX design, and learn about user interface (UI) and user experience (UX) design. Understand practical processes, define user needs and problems, and present solutions to resolve them
+                                </p>
+                                <p class="txt kr">
+                                    UI/UX디자인의 핵심 도구인 피그마(Figma)에 대한 기본 운용 능력 및 활용법을 배우으로 프로토타입을 제작할 수 있으며, 사용자 인터페이스(UI) 및 사용자경험(UX)디자인의 실질적인  프로세스를 이해하며, 사용자의 니즈와 문제를 정의할 수 있으며,  해결방법에 대한 솔루션을 제시할 수 있습니다. 
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="box b">
+                        <div class="topBox">
+                            <h3 class="en">Web Publishing</h3>
+                            <ul class="in">
+                                <li><a href="#"><img src="images/icon_html.png" alt=""></a></li>
+                                <li><a href="#"><img src="images/icon_css.png" alt=""></a></li>
+                                <li><a href="#"><img src="images/icon_jq.png" alt=""></a></li>
+                                <li><a href="#"><img src="images/icon_js.png" alt=""></a></li>
+                                <li><a href="#"><img src="images/icon_gsap.png" alt=""></a></li>
+                            </ul>
+                        </div>
+                        <div class="bottomBox">
+                            <p class="num">2</p>
+                            <div class="textBox">
+                                <p class="tit">
+                                    html/css를 통한 반응형 웹 및 js를 통한 인터렉션을 구현할 수 있으며, GSAP을 통한 인터렉티브웹  제작
+                                </p>
+                                <p class="txt en">
+                                    By creating a responsive web using html/css and cloning a currently released website, you will acquire web development skills and use javaScript.   You can implement animation that responds to scrolling by implementing dynamic elements and utilizing GSAP ScrollTrigger. 
+                                </p>
+                                <p class="txt kr">
+                                    html/css를 활용한 반응형웹 제작 및 현재 출시되어 있는 웹사이트를 클론코딩해봄으로써, 웹 개바라 기술을 습득하며, javaScript를 활용한 동적요소 구현및 GSAP ScrollTrigger를 활용하여 스크롤에 반응하는 애니메이션을 구현할 수 있습니다
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="box c">
+                        <div class="topBox">
+                            <h3 class="en">Portfolio 제작</h3>
+                            <ul class="in">
+                                <li><a href="#"><img src="images/icon_ai.png" alt=""></a></li>
+                                <li><a href="#"><img src="images/icon_ps.png" alt=""></a></li>
+                                <li><a href="#"><img src="images/icon_Figma.png" alt=""></a></li>
+                                <li><a href="#"><img src="images/icon_html.png" alt=""></a></li>
+                                <li><a href="#"><img src="images/icon_css.png" alt=""></a></li>
+                                <li><a href="#"><img src="images/icon_jq.png" alt=""></a></li>
+                                <li><a href="#"><img src="images/icon_js.png" alt=""></a></li>
+                                <li><a href="#"><img src="images/icon_gsap.png" alt=""></a></li>
+                            </ul>
+                        </div>
+                        <div class="bottomBox">
+                            <p class="num">3</p>
+                            <div class="textBox">
+                                <p class="tit">
+                                    개인의 강점과 차별화된 능력을 보여주는 포트폴리오 제작
+                                </p>
+                                <p class="txt en">
+                                    With the goal of getting a job, we focus on creating a portfolio that effectively showcases your skills, project experience, and creativity. Based on the UUX process, you will learn the portfolio planning design process, key components and production methods, and strategies to highlight your strengths. 
+                                </p>
+                                <p class="txt kr">
+                                    취업을 목표로 자신의 기술, 프로젝트 경험, 창의력을 효과적으로 보여줄 수 있는 포트폴리오를 제작하는데 중점을 둡니다. UIUX프로세스를기반으로 포트폴리오 기획 설계과정과 핵심 구성요소와 제작 방법, 자신의 강점을 돋보이게 하는 전략 등을 배우게 됩니다.  
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+    </div>
+</body>
+</html>
