@@ -36,7 +36,7 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 1vw; line-height: 1.6;
     100%{transform: translate3d(-100%,0,0);}
 }
 
-.visual .textBox{width: 30%; position: absolute; right: 5%; top: 40%;}
+.visual .textBox{width: 30%; position: absolute; right: 5%; top: 45%;}
 .visual .textBox ul .top{font-size: 3vw; border-bottom: 1px solid #fff;}
 .visual .textBox ul .top h2{font-weight: normal;}
 .visual .textBox ul li{display: flex; margin-bottom: 12px;}
@@ -48,7 +48,7 @@ body {font-family: 'Noto Sans KR', sans-serif; font-size: 1vw; line-height: 1.6;
 .visual .textLoop2 ul{display: flex; white-space: nowrap; font-size: 4vw; letter-spacing: -2px; background: rgba(255, 255, 255, 1); color: #000; padding: 5px 0; position: absolute;}
 .visual .textLoop2 ul li{padding: 0 15px;}
 .visual .textLoop2 ul.a{transform: rotate(7deg); background: rgba(255,255,255,0); color: #fff; border-top: 1px solid #fff; border-bottom: 1px solid #fff;}
-.visual .textLoop2 ul.b{transform: rotate(-7deg); top:-80px;}
+.visual .textLoop2 ul.b{transform: rotate(-7deg); top:-100px;}
 
 .visual .textLoop2 ul.a li{animation: textLoop 7s linear infinite;}
 .visual .textLoop2 ul.b li{animation: textLoop2 7s linear infinite;}
